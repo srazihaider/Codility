@@ -20,8 +20,7 @@ int solution(int N) {
         
         {
           counter++;
-          prev=true;
-            
+          prev=true;   
         }
         
        else if (Remainder == 0 && prev == false && isfirstremainder ==true )
@@ -29,8 +28,6 @@ int solution(int N) {
         {
             counter =1;
             prev= true;
-            
-            
         }
         
         else if (Remainder==1)
@@ -38,49 +35,16 @@ int solution(int N) {
          {
            
            if(binarygap<counter)
-           binarygap=counter;
-            
+           binarygap=counter; 
             prev=false;
-            
-            isfirstremainder=true;
-            
+            isfirstremainder=true; 
          }
          
-        N=N/2; 
-         
+        N=N/2;   
     }
 
      return binarygap;   
 }
         
         
-       else if (Remainder == 1 && prev == false)
-        
-        
-        {
-            
-            
-            
-            
-        }
-    
-    
-        else
-        
-        {
-            
-            
-            
-            
-            
-            
-        }
-    
-
-        
-      N=N/2;
-        
-    }
-    
-    return binarygap;  
-}
+      
