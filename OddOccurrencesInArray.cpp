@@ -7,33 +7,39 @@
 int solution(vector<int> &A) {
     // write your code in C++14 (g++ 6.2.0)
 
-bool isbroken = false ;
+int numberofoccurrences = 0 ;
 unsigned int i=0;
 
 
-for ( i=0;i<A.size()-1;i++)
+for ( i=0;i<A.size();i++)
 {
-    
 
-    
- for(unsigned int j=1;j<A.size();j++)
+ for(unsigned int j=0;j<A.size();j++)
  {
      
-  if(i==j)
-  j++;
+
  
  if(A[i]==A[j])
  {
-  isbroken=true;
-  break;
+  numberofoccurrences++;
+
  }
- else
- {
- 
- isbroken=false;
- 
- }
+
 }
+
+cout<<"number of occurences for "<<A[i]<<" is "<<numberofoccurrences<<endl;
+
+ if(numberofoccurrences%2==1 ||  numberofoccurrences==0 )
+ return A[i];
+ 
+ numberofoccurrences=0;
+    
+}
+
+return A[A.size()-1];
+
+}
+
 
 if(isbroken == false)
 {
