@@ -29,7 +29,7 @@ for ( i=0;i<A.size();i++)
 
 cout<<"number of occurences for "<<A[i]<<" is "<<numberofoccurrences<<endl;
 
- if(numberofoccurrences%2==1 ||  numberofoccurrences==0 )
+ if(numberofoccurrences%2==1)
  return A[i];
  
  numberofoccurrences=0;
