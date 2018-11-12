@@ -6,46 +6,47 @@
 
 int solution(vector<int> &A) {
     // write your code in C++14 (g++ 6.2.0)
+    int max=0;
+    
+    for(unsigned int i=0;i<A.size();i++)
+    {
+        if(max<A[i]);
+        max=A[i];
+    }
+    
 
-int numberofoccurrences = 0 ;
-vector <int> alreadychecked;
-unsigned int i=0;
-
-
-for ( i=0;i<A.size();i++)
-{
     
     
-    for(int k=0;k<alreadychecked.size();k++)
+    
+    std::vector<int> Hashtable(max+1, 0);
+    
+    
+    
+    for(unsigned int i = 0; i<A.size();i++)
     {
         
-        if(A[i]==alreadychecked[k])
-        i++;
+        Hashtable[A[i]]= Hashtable[A[i]]+1;
         
     }
-
- for(unsigned int j=0;j<A.size();j++)
- {
-     
-
- 
- if(A[i]==A[j])
- {
-  numberofoccurrences++;
-
- }
-
-}
-
-
-
- if(numberofoccurrences%2==1)
- return A[i];
- 
- numberofoccurrences=0;
     
-}
 
-return A[A.size()-1];
-
+    
+    
+    for(int i=0;i<=max;i++)
+    {
+        
+   
+     
+     
+     if(Hashtable[i]%2 ==1)
+     return i;
+        
+      
+    }
+    
+    
+    return 0;
+    
+    
+    
 }
