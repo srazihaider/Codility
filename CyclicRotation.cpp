@@ -10,6 +10,15 @@ vector<int> solution(vector<int> &A, int K) {
     
  vector<int> returnvector;
  int counter=0;
+ 
+if (A.size()==0 || A.size()==1 || K==0 ||A.size()==K )
+return A;
+
+
+if(A.size()<=K)
+K=K%A.size();
+
+
 int dividing_line = A.size() - K;
 
 for(int i = dividing_line; i<A.size();i++ )
