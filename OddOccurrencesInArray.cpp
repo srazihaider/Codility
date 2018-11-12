@@ -14,6 +14,15 @@ unsigned int i=0;
 
 for ( i=0;i<A.size();i++)
 {
+    
+    
+    for(int k=0;k<alreadychecked.size();k++)
+    {
+        
+        if(A[i]==alreadychecked[k])
+        i++;
+        
+    }
 
  for(unsigned int j=0;j<A.size();j++)
  {
@@ -28,7 +37,7 @@ for ( i=0;i<A.size();i++)
 
 }
 
-cout<<"number of occurences for "<<A[i]<<" is "<<numberofoccurrences<<endl;
+
 
  if(numberofoccurrences%2==1)
  return A[i];
@@ -40,6 +49,3 @@ cout<<"number of occurences for "<<A[i]<<" is "<<numberofoccurrences<<endl;
 return A[A.size()-1];
 
 }
-
-
-
