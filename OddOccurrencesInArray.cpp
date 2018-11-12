@@ -8,6 +8,7 @@ int solution(vector<int> &A) {
     // write your code in C++14 (g++ 6.2.0)
 
 int numberofoccurrences = 0 ;
+vector <int> alreadychecked;
 unsigned int i=0;
 
 
@@ -37,24 +38,6 @@ cout<<"number of occurences for "<<A[i]<<" is "<<numberofoccurrences<<endl;
 }
 
 return A[A.size()-1];
-
-}
-
-
-if(isbroken == false)
-{
-    
-     
-      return A[i];
-
-}
-
-    
-}
-
-
-return A[A.size()-1];
-
 
 }
 
