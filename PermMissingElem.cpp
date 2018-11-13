@@ -12,7 +12,11 @@ int solution(vector<int> &A) {
     sum= sum+ A[i];
  }
  
- int gauss_sum= (A.size()+2)*(A.size()+1)/2;
+ // N = A.size()+1 
+ 
+ int gauss_sum= (A.size()+1)*(A.size()+2)/2;
+ 
+ 
  
  return gauss_sum-sum;
 }
