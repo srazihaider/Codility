@@ -1,51 +1,32 @@
 // you can use includes, for example:
 // #include <algorithm>
 
+#include <unordered_map>
+
 // you can write to stdout for debugging purposes, e.g.
 // cout << "this is a debug message" << endl;
 
 int solution(vector<int> &A) {
     // write your code in C++14 (g++ 6.2.0)
-    int max=0;
     
-    for(unsigned int i=0;i<A.size();i++)
-    {
-        if(max<A[i]);
-        max=A[i];
-    }
-    
+    std::unordered_map <int,int> myHashtable;
 
     
-    
-    
-    std::vector<int> Hashtable(max+1, 0);
-    
-    
-    
-    for(unsigned int i = 0; i<A.size();i++)
+    for(unsigned int i = 0;i<A.size();i++)
     {
-        
-        Hashtable[A[i]]= Hashtable[A[i]]+1;
-        
-    }
+        if (myHashtable.find(A[i])==myHashtable.end())
+            myHashtable[A[i]]=1;
+        else
+            myHashtable[A[i]]=myHashtable[A[i]]+1;
     
-
-    
-    
-    for(int i=0;i<=max;i++)
-    {
-        
-   
-     
-     
-     if(Hashtable[i]%2 ==1)
-     return i;
-        
-      
     }
     
     
-    return 0;
+    for (auto x : myHashtable) 
+     if (x.second%2==1)
+     return x.first;
+    
+    
     
     
     
