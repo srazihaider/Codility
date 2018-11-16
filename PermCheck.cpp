@@ -1,4 +1,4 @@
-*/
+/*
 
 The major confusion in this algorithm is that although the permutation is said to be a non-duplicated sequence of numbers,
 there is no guarentee that the input will also be a without duplications. 
@@ -14,8 +14,7 @@ hence the worst case should be O(Nlog N)
 
 
 
-/*
-
+*/
 
 
 #include <set>
