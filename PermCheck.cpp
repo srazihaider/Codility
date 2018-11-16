@@ -3,7 +3,8 @@
 The major confusion in this algorithm is that although the permutation is said to be a non-duplicated sequence of numbers,
 there is no guarentee that the input will also be a without duplications. 
 
-Hence to remove the duplication I have used a set where the worst case insertion function is Order Log (N)
+Hence to remove the duplication I have used a set where the worst case insertion function is Order Log (N) and N insertions will be
+O (NlogN)
 
 once that is done the accumulate function is used to add the sum of the set which I assume is order N log N as each look up is log(N)
 and N lookups should be order NlogN
