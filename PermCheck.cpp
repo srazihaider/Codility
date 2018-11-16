@@ -13,42 +13,24 @@ final comparison between Gauss's sum and the accumulated sum is O(1)
 
 hence the worst case should be O(Nlog N)
 
-
-
 */
-
-
 #include <set>
 #include<numeric>
 
 int solution(vector<int> &A) {
-    
     set<int> myset;
     int sum=0;
-   
-   
-   
     for(auto itr : A)
     {
         myset.insert(itr);
-      
-        
     }
      
    sum= std::accumulate(myset.begin(), myset.end(),0 );
-  
     int N= A.size();
     int Gauss_sum= N*(N+1)/2;
-
     if(sum==Gauss_sum)
     return 1;
     else
     return 0;
-    
-    
-    
-    
-    
-    
-    
+      
 }
