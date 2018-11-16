@@ -8,13 +8,7 @@ To calculate the sum with in the Set could have been done by using accumulate bu
 in the worst case which was not a desirable result. 
 
 Instead I used an a simple sum integer to add the values being inserted every time there is no duplication. 
-
-
-
 */
-
-
-
 #include<numeric>
 #include<set>
 
@@ -27,21 +21,12 @@ int solution(int X, vector<int> &A) {
   
     for (unsigned int i=0;i<A.size();i++)
     {
-        
-       
         if(myset.insert(A[i]).second == true )  // no duplication -> value inserted
         {
-            
             sum+=A[i];
-           
             if(sum==Gauss_sum)
             return i;
-            
         }
-        
     }
-    
     return -1;
-   
-    
 }
