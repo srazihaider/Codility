@@ -1,8 +1,3 @@
-/*
-this is a new idea but it does not work has multiple issues 
-I am keeping this as a backup only
-*/
-
 
 vector<int> solution(int N, vector<int> &A) {
     
@@ -10,30 +5,35 @@ vector<int> solution(int N, vector<int> &A) {
     counter.assign(N,0);
     int max= 0;
     int last_max=0;  // last max is the effective max value on which the N value was exceeded
-    int  index_max=0;
+    
 for (unsigned int i =0; i<A.size();i++)
 {
     if(A[i]<=N)
     {
+        if(counter [A[i]-1]<last_max)
+        {
+        counter [A[i]-1]= last_max+1;
+       
+        }
+        else
         counter [A[i]-1]++;
+      
       if (max< counter [A[i]-1] )
       {
           max=  counter [A[i]-1];
-          index_max=i;
-      }  
+      }
+       
+    }
       else 
       {
           last_max=max;
       }
-    }
 }  
 
-counter.assign(N,last_max);
-
-for (unsigned int i = max; i<A.size();i++)
+for (unsigned int i = 0; i<counter.size();i++)
 
 {
-    counter [A[i]-1]++;
+    counter [i]= std::max(last_max,counter[i]);
 }
 
 return counter;
