@@ -1,9 +1,5 @@
 /*
-
 This is not the final solution , it has performance issues. 77% result
-
-
-
 */
 
 
